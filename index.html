@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY CLOUD GAMING</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 24px 12px;
+      background: #151d35;
+      border-bottom: 2px solid #35e0b5;
+    }
+    h1 { color: #35e0b5; margin: 0; }
+    .subtitle { color: #b8c5dc; }
+    main { padding: 24px 14px; }
+    .game {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 24px;
+      background: #17213b;
+      border-radius: 16px;
+      border: 1px solid #334567;
+    }
+    .cover {
+      font-size: 64px;
+      margin: 12px;
+    }
+    h2 { margin-bottom: 8px; }
+    p { line-height: 1.6; color: #d3dced; }
+    button {
+      width: 100%;
+      margin-top: 12px;
+      padding: 14px;
+      border: 0;
+      border-radius: 10px;
+      background: #35e0b5;
+      color: #07151a;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    button.secondary {
+      background: #334567;
+      color: white;
+    }
+    #message {
+      margin-top: 16px;
+      color: #ffd166;
+    }
+    footer {
+      padding: 24px 12px;
+      color: #91a0bb;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MY CLOUD GAMING</h1>
+    <div class="subtitle">Trang chơi game trên đám mây</div>
+  </header>
+
+  <main>
+    <section class="game">
+      <div class="cover">🎮</div>
+      <h2>GTA V</h2>
+      <p>
+        Grand Theft Auto V<br>
+        Trạng thái: Chưa kết nối máy chủ
+      </p>
+      <button onclick="connectServer()">
+        KẾT NỐI MÁY CHỦ
+      </button>
+      <button class="secondary" onclick="showInfo()">
+        HƯỚNG DẪN
+      </button>
+      <div id="message"></div>
+    </section>
+  </main>
+
+  <footer>
+    MY CLOUD GAMING · Trang giao diện thử nghiệm
+  </footer>
+
+  <script>
+    function connectServer() {
+      document.getElementById("message").textContent =
+        "Chưa có máy chủ cloud gaming được kết nối.";
+    }
+
+    function showInfo() {
+      document.getElementById("message").textContent =
+        "Bạn cần máy chủ có game GTA V hợp pháp để chơi thật.";
+    }
+  </script>
+</body>
+</html>
